@@ -10,7 +10,7 @@ function smiteGame(gamemode, ranknumber) {
   function role(ranknumber) {
     const roles = ['ADC', 'Support', 'Mid', 'Jungle', 'Solo']
 
-    console.log(`I'll play some ${roles[ranknumber]} in ${gametype[gamemode]}`)
+    console.log(`I'll play ${roles[ranknumber]} in ${gametype[gamemode]}`)
   }
 }
 
