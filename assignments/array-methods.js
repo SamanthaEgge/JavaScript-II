@@ -99,8 +99,28 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.
 // Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+//// Problem 1
+// Create a list sorted by last name
+let signIn = [];
+function signInSorting (array) {
+    let unsortedList = [];
 
-// Problem 2
+    array.forEach(function (nameid) {
+        let unsortedItem = `${nameid.last_name}, ${nameid.first_name} -- ${nameid.shirt_size}`;
+        return unsortedList.push(unsortedItem);
+    })
 
-// Problem 3
+    return signIn = unsortedList.sort();
+}
+
+signInSorting(runners);
+
+console.log(signIn);
+
+//// Problem 2
+
+
+
+
+
+//// Problem 3

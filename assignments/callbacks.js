@@ -99,8 +99,8 @@ function removeDuplicates(array, callback) {
   callback(modifiedArray);
 }
 
-function printCallback (modifiedArray) {
-  console.log(modifiedArray);
+function printCallback (arrayvar) {
+  console.log(arrayvar);
 }
 
 removeDuplicates(items, printCallback);
