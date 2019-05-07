@@ -1,7 +1,7 @@
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.
 // Study both the problem and the solution to figure out the rest of the problems.
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+const items = ['Pencil', 'Gum', 'Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 /*
@@ -86,8 +86,24 @@ contains('Gum', items, function(thing){
 
 /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
+function removeDuplicates(array, callback) {
+  let modifiedArray = [];
+  let sortedArray = array.sort();
+  for (i = 0; i < array.length; i++) {
+    if (array[i] !== array[i-1]) {
+      modifiedArray.push(array[i])
+    }
+    else continue
+  }
+
+  callback(modifiedArray);
 }
+
+function printCallback (modifiedArray) {
+  console.log(modifiedArray);
+}
+
+removeDuplicates(items, printCallback);
+
+//let sortedArray = items.sort();
+// console.log(sortedArray);
