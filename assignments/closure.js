@@ -1,6 +1,20 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function smiteGame(gamemode, ranknumber) {
+  const gametype = ['Ranked', 'Arena', 'Casuals', 'Clash', 'Smite Pro League'];
+
+  //console.log(`Let's play some ${gametype[gamemode]}`)
+
+  role(ranknumber);
+  function role(ranknumber) {
+    const roles = ['ADC', 'Support', 'Mid', 'Jungle', 'Solo']
+
+    console.log(`I'll play some ${roles[ranknumber]} in ${gametype[gamemode]}`)
+  }
+}
+
+smiteGame(0, 1);
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
