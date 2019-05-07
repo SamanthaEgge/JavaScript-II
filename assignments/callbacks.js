@@ -67,10 +67,22 @@ multiplyNums(7, 8, function(multiply) {
   console.log('7 times 8 is', multiply);
 })
 
-function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
+
+////Number 5
+function contains(item, list, callback) {
+    // contains checks if an item is present inside of the given array/list.
+    // Pass true to the callback if it is, otherwise pass false.
+    if (list.includes(item)) {
+      return callback(true)
+    }
+    else {
+      return callback(false)
+    }
 }
+
+contains('Gum', items, function(thing){
+  console.log('This is', thing)
+})
 
 /* STRETCH PROBLEM */
 
